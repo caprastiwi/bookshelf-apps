@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bookshelf Apps</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>Bookshelf Apps</h1>
+</header>
+<main>
+<section id="topButton">
+    <button class="addBookBtn" onclick="openForm()">Add Book</button>
+    <button class="searchBookBtn" onclick="openSearchBar()">Search Book</button>
+</section>
+<section id="addBookForm">
+    <form id="form-content">
+        <div class="form-item">
+            <label for="inputBookTitle">Title</label>
+            <input type="text" id="inputBookTitle" placeholder="e.g. The Alchemist" minlength="1" maxlength="50" autocomplete="off" required>
+        </div>
+        <div class="form-item">
+            <label for="inputBookAuthor">Author</label>
+            <input type="text" id="inputBookAuthor" placeholder="e.g. Paulo Coelho" minlength="1" maxlength="30" autocomplete="off" required>
+        </div>
+        <div class="form-item">
+            <label for="inputBookYear">Year</label>
+            <input type="number" id="inputBookYear" placeholder="e.g. 1988" pattern="\d*" maxlength="4" min="1" max="2022" required>
+        </div>
+        <div class="form-item">
+            <label for="inputBookIsComplete">Status</label>
+            <div class="wrapper">
+                <input id="inputBookIsComplete" type="checkbox">
+                <label>Complete</label>
+            </div>
+        </div>
+        <div class="form-item button">
+            <input type="submit" id="bookSubmit">
+            <button class="cancelFormBtn" onclick="cancelForm()">Cancel</button>
+        </div>
+    </form>
+</section>
+<section class="search-content" id="searchBar">
+    <form id="searchBook" class="search-bar">
+        <label for="searchBookTitle">Search Title Book</label>
+        <div class="search-wrapper">
+            <input type="text" id="searchBookTitle" placeholder="Search a book.." autocomplete="off">
+            <button type="submit" id="searchSubmit">Search</button>
+        </div>
+    </form>
+</section>
+<section class="bookshelf-content">
+    <h2>On-going</h2>
+    <h6>*Click title to edit book</h6>
+    <div id="ongoingList" class="book-list"></div>
+</section>
+<section class="bookshelf-content">
+    <h2>Complete</h2>
+    <h6>*Click title to edit book</h6>
+    <div id="completeList" class="book-list"></div>
+</section>
+</main>
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <h1>Azhari</h1>
+            <p>All I wanna do is, <span>FLY HIGH!</span></p>
+        </div>
+        <div class="footer-right">
+            <a class="socials" href="https://twitter.com/Azhprstw"><i class="fab fa-twitter"></i></a>
+            <a class="socials" href="https://instagram.com/xyzhaphire"><i class="fab fa-instagram"></i></a>
+            <a class="socials" href="https://linkedin.com/in/caprastiwi"><i class="fab fa-linkedin-in"></i></a>
+            <a class="socials" href="https://github.com/caprastiwi"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
